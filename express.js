@@ -23,6 +23,8 @@ app.use((req, res) => {
 // Create server object
 const server = http.createServer(app);
 
-// Start listening
-server.listen(3001);
+// Start server listening on port 3001
+server.listen(3001, () => {
+  console.log('NodeJS is listening on port %s', server.address().port);
+});
 
